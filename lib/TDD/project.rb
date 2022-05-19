@@ -1,6 +1,4 @@
-# frozen_string_literal: true
-
-require_relative "project/version"
+require_relative 'project/version'
 
 module TDD
   module Project
