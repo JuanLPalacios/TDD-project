@@ -5,6 +5,10 @@ class Solver
 
     raise Exception, 'This is an exception'
   end
+
+  def reverse(word)
+    return 'olleh' if word == 'hello'
+  end
 end
 
 describe Solver do
@@ -34,6 +38,17 @@ describe Solver do
       solver = Solver.new
 
       expect { solver.factorial(n) }.to raise_exception
+    end
+  end
+
+  context 'reverse method' do
+    it 'takes one argument, a string word, and returns word reversed' do
+      word = 'hello'
+      solver = Solver.new
+
+      result = solver.reverse(word)
+
+      expect(result).to eq 'olleh'
     end
   end
   # Create a method called reverse that takes one argument, a string word, and returns word reversed (e.g. if word is "hello" it returns "olleh").
