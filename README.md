@@ -1,7 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# OOP-school-library
-> a tool to record what books are in the library and who borrows them.
+# TDD-Project
+> class with some methods implemented by doing test-driven development (TDD).
 
 ## Built With
 
@@ -13,13 +13,13 @@
 To get a local copy follow these simple example steps.  
 
 1.- Open the terminal window and clone the repository using this command:  
-`git clone https://github.com/JuanLPalacios/OOP-school-library.git` 
+`git clone git@github.com:JuanLPalacios/TDD-project.git` 
 
 2.- Change the directory to the enumerables directory  
-`cd OOP-school-library`  
+`cd todo-project`  
 
 3.- to run the app run this command:   
-`ruby main.rb`  
+`ruby solver.rb`  
 
 ## Unit Tests (Rspec)
 
