@@ -1,7 +1,9 @@
+require './solver'
+
 describe Solver do
   context 'factorial method' do
-    it 'takes one argument, an integer N, and returns the factorial for that number.
-				The factorial is the multiplication of all integers from 1 to N' do
+    it 'takes one argument, an integer N, and returns the factorial for that number. '+
+			 'The factorial is the multiplication of all integers from 1 to N' do
       n = 12
       solver = Solver.new
 
@@ -19,8 +21,8 @@ describe Solver do
       expect(result).to eq 1
     end
 
-    it 'This method only accepts 0 and positive integers, so if a negative
-				integer is given it should raise an exception.' do
+    it 'This method only accepts 0 and positive integers, so if a negative '+
+			 'integer is given it should raise an exception.' do
       n = -1
       solver = Solver.new
 
