@@ -1,16 +1,3 @@
-class Solver
-  def factorial(number)
-    return 479_001_600 if number == 12
-    return 1 if number == 0
-
-    raise Exception, 'This is an exception'
-  end
-
-  def reverse(word)
-    return 'olleh' if word == 'hello'
-  end
-end
-
 describe Solver do
   context 'factorial method' do
     it 'takes one argument, an integer N, and returns the factorial for that number.
@@ -51,10 +38,42 @@ describe Solver do
       expect(result).to eq 'olleh'
     end
   end
-  # Create a method called reverse that takes one argument, a string word, and returns word reversed (e.g. if word is "hello" it returns "olleh").
-  # Create a method called fizzbuzz that takes one argument, an integer N, and returns a string. The returned string is constructed following these rules:
-  # When N is divisible by 3, return "fizz".
-  # When N is divisible by 5, return "buzz".
-  # When N is divisible by 3 and 5, return "fizzbuzz".
-  # Any other case, return N as a string (e.g. say N is 7 then return "7").
+
+  context 'fizzbuzz method' do
+    it 'takes one argument, an integer is divisible by 3, and returns string fizz' do
+      number = 6
+      solver = Solver.new
+
+      result = solver.fizzbuzz(number)
+
+      expect(result).to eq 'fizz'
+    end
+
+    it 'takes one argument, an integer is divisible by 5, and returns string buzz' do
+      number = 10
+      solver = Solver.new
+
+      result = solver.fizzbuzz(number)
+
+      expect(result).to eq 'buzz'
+    end
+
+    it 'takes one argument, an integer is divisible by 3 and 5, and returns string fizzbuzz' do
+      number = 15
+      solver = Solver.new
+
+      result = solver.fizzbuzz(number)
+
+      expect(result).to eq 'fizzbuzz'
+    end
+
+    it 'takes one argument, an integer is not divisible by 3 or 5, and returns number as string' do
+      number = 13
+      solver = Solver.new
+
+      result = solver.fizzbuzz(number)
+
+      expect(result).to eq '13'
+    end
+  end
 end
